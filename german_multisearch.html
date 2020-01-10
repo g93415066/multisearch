@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	</head>
+	<body style="background-color:black">
+
+<font color="white" size="5">
+<p> 德文有這麼難嗎?!</p>
+<p> > Search : </p> </font>
+<input type="text" id="boxu" autofocus="">
+
+
+<font color="white">
+<p> PONS   <input type="checkbox" id="pons"> 
+Linguee   <input type="checkbox" id="linguee">
+Bing   <input type="checkbox" id="bing"> </p>
+</font>
+
+<font color="white">
+<p> 1. ich bin / du bist / er,sie,es ist / wir sind / ihr seid / sie,Sie sind </p> 
+<p> 2. ich mich mir / du dich dir / er ihn ihm / sie sie ihr / es es ihm / wir uns / ihr euch / sie,Sie (s)ie (i)hnen : Dativ比較白目 </p>
+<p> 3. der die das die / den die das die / dem der dem den / des der des der</p> 
+<a href="https://mulderwei.blogspot.com/">宅宅該做宅宅該做的事</a>
+</font>
+
+
+
+<script>
+document.getElementById("boxu").onkeydown = function(e) {searchy(e)};
+function searchy(e) 
+{
+	if (e.which == 13)
+	{
+  	 var q = document.getElementById("boxu").value;
+	 if (document.getElementById("bing").checked == true) {
+	 	window.open("https://www.bing.com/search?q=" + q);
+		}
+	 if (document.getElementById("pons").checked == true) {
+		window.open("http://en.pons.com/translate?q=" + q + "&l=deen&in=&lf=de");
+		}
+	 if (document.getElementById("linguee").checked == true) {
+		window.open("http://www.linguee.com/english-german/search?source=auto&query=" + q);
+		}
+	 window.open("http://dict.leo.org/german-english/" + q);
+	 window.open("https://www.dwds.de/?q=" + q);
+	 window.open("http://www.duden.de/rechtschreibung/" + q);
+	 document.getElementById("boxu").value = "";		
+	}
+}
+</script>
+	</body></html>
